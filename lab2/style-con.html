@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторні роботи</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header>
+    <h1>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ<br>З ДИСЦИПЛІНИ "ІНТЕРНЕТ-ТЕХНОЛОГІЇ ТА ПРОЕКТУВАННЯ WEB-ЗАСТОСУВАНЬ"</h1>
+    <p>Студента групи IM-13  Землянського Олександра Валентиновича</p>
+    <div class="student-info">
+        <img src="../img/photo.png" alt="Student Photo" class="student-photo">
+    </div>
+</header>
+<nav>
+    <a href="../lab1/index.html" class="button">Лабораторна №1</a>
+    <a href="../lab2/index.html" class="button">Лабораторна №2</a>
+    <a href="../lab3/index.html" class="button">Лабораторна №3</a>
+    <a href="../lab4/index.html" class="button">Лабораторна №4</a>
+    <a href="../lab5/index.html" class="button">Лабораторна №5</a>
+    <a href="../lab6/index.html" class="button">Лабораторна №6</a>
+    <a href="../lab7/index.html" class="button">Лабораторна №7</a>
+    <a href="../lab8/index.html" class="button">Лабораторна №8</a>
+    <a href="../lab9/index.html" class="button">Лабораторна №9</a>
+</nav>
+<main>
+    <aside>
+        <ul>
+            <li><a href="theme.html" class="sidebar-button">Тема, мета, місце розташування лаби</a></li>
+            <li><a href="style-con.html" class="sidebar-button">Способи підключення стилів</a></li>
+            <h2>Селектори:</h2>
+            <li><a href="class-selectors.html" class="sidebar-button">Селектори класів</a></li>
+            <li><a href="tag-selectors.html" class="sidebar-button">Селектори тегів</a></li>
+            <li><a href="id-selectors.html" class="sidebar-button">Селектори ID</a></li>
+            <h2>Інше:</h2>
+            <li><a href="fonts.html" class="sidebar-button">CSS Шрифти та інше</a></li>
+            <li><a href="conclusions.html" class="sidebar-button">Висновки</a></li>
+        </ul>
+    </aside>
+    <section>
+        <div class="content">
+            <h2>Способи підключення стилів</h2>
+            <p>Стилі можна підключати до HTML-документу різними способами:</p>
+            <ul>
+                <li>Вкладення стилів в HTML-документ</li>
+                <li>Підключення зовнішнього файлу стилів</li>
+                <li>Підключення стилів за допомогою атрибуту style</li>
+                <li>@import - підключення стилів з іншого файлу</li>
+            </ul>
+
+            <h2>Приклади:</h2>
+            <h3>Вкладення стилів в HTML-документ:</h3>
+            <pre>
+                <code>
+                    &lt;html&gt;
+                    &lt;head&gt;
+                        &lt;style&gt;
+                            h1 {
+                                color: red;
+                            }
+                        &lt;/style&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;h1&gt;Hello, World!&lt;/h1&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </code>
+
+            </pre>
+            <h3>Підключення зовнішнього файлу стилів:</h3>
+            <pre>
+                <code>
+                    &lt;html&gt;
+                    &lt;head&gt;
+                        &lt;link rel="stylesheet" href="styles.css"&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;h1&gt;Hello, World!&lt;/h1&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </code>
+
+            </pre>
+            <h3>Підключення стилів за допомогою атрибуту style:</h3>
+            <pre>
+                <code>
+                    &lt;html&gt;
+                    &lt;head&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;h1 style="color: red;"&gt;Hello, World!&lt;/h1&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </code>
+
+            </pre>
+
+            <h3>@import - підключення стилів з іншого файлу:</h3>
+            <pre>
+                <code>
+                    &lt;html&gt;
+                    &lt;head&gt;
+                        &lt;style&gt;
+                            @import url('styles.css');
+                        &lt;/style&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;h1&gt;Hello, World!&lt;/h1&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </code>
+            </pre>
+        </div>
+    </section>
+</main>
+</body>
+</html>
