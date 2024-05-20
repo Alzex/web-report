@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторні роботи</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header>
+    <h1>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ<br>З ДИСЦИПЛІНИ "ІНТЕРНЕТ-ТЕХНОЛОГІЇ ТА ПРОЕКТУВАННЯ WEB-ЗАСТОСУВАНЬ"</h1>
+    <p>Студента групи IM-13  Землянського Олександра Валентиновича</p>
+    <div class="student-info">
+        <img src="../img/photo.png" alt="Student Photo" class="student-photo">
+    </div>
+</header>
+<nav>
+    <a href="../lab1/index.html" class="button">Лабораторна №1</a>
+    <a href="../lab2/index.html" class="button">Лабораторна №2</a>
+    <a href="../lab3/index.html" class="button">Лабораторна №3</a>
+    <a href="../lab4/index.html" class="button">Лабораторна №4</a>
+    <a href="../lab5/index.html" class="button">Лабораторна №5</a>
+    <a href="../lab6/index.html" class="button">Лабораторна №6</a>
+    <a href="../lab7/index.html" class="button">Лабораторна №7</a>
+    <a href="../lab8/index.html" class="button">Лабораторна №8</a>
+    <a href="../lab9/index.html" class="button">Лабораторна №9</a>
+</nav>
+<main>
+    <aside>
+        <ul>
+            <li><a href="theme.html" class="sidebar-button">Тема, мета, місце розташування лаби</a></li>
+            <li><a href="description.html" class="sidebar-button">Пояснення версій</a></li>
+            <li><a href="appearence.html" class="sidebar-button">Зовнішній вигляд (скриншоти)</a></li>
+            <li><a href="source.html" class="sidebar-button">Вихідний код</a></li>
+            <li><a href="conclusions.html" class="sidebar-button">Висновки</a></li>
+        </ul>
+    </aside>
+    <section>
+        <div>
+            <h2>Створення десктопної, планшетної та мобільної версії</h2>
+            <p>Для створення адаптивної верстки використовуються медіа-запити, які дозволяють застосовувати різні стилі в залежності від розміру екрану пристрою. Ось основні кроки для створення верстки для різних пристроїв:</p>
+            <h3>Десктопна версія</h3>
+            <p>Десктопна версія зазвичай створюється першою, оскільки на великих екранах найзручніше розташовувати елементи інтерфейсу та контент. Наприклад, для десктопної версії можна використовувати широку сітку з кількома колонками, великими зображеннями та багатим текстовим контентом.</p>
+            <h3>Планшетна версія</h3>
+            <p>Для планшетів зазвичай використовуються медіа-запити для пристроїв з шириною екрану до 1200 пікселів. В цій версії інтерфейс має бути більш компактним, можливо, зменшення кількості колонок у сітці та зменшення розміру зображень. Наприклад:</p>
+            <pre><code>
+                @media (max-width: 1200px) {
+                    .container {
+                        padding: 10px;
+                    }
+                    .column {
+                        width: 100%;
+                    }
+                }
+            </code></pre>
+            <h3>Мобільна версія</h3>
+            <p>Для мобільних пристроїв зазвичай використовуються медіа-запити для пристроїв з шириною екрану до 768 пікселів. Інтерфейс має бути максимально спрощеним, з великими кнопками та текстом, щоб забезпечити зручність використання на маленьких екранах. Наприклад:</p>
+            <pre><code>
+                @media (max-width: 768px) {
+                    .container {
+                        padding: 5px;
+                    }
+                    .column {
+                        width: 100%;
+                        margin-bottom: 20px;
+                    }
+                }
+            </code></pre>
+        </div>
+    </section>
+</main>
+</body>
+</html>
