@@ -40,6 +40,15 @@
             <li><a href="conclusions.html" class="sidebar-button">Висновки</a></li>
         </ul>
     </aside>
+    <div class="content">
+        <h2>Обробник подій</h2>
+        <p>Обробники подій (event handlers) дозволяють виконувати JavaScript-код у відповідь на події, такі як натискання кнопок, рух миші тощо. Наприклад, ви можете використовувати атрибути HTML, такі як <code>onclick</code>, <code>onmouseover</code> тощо:</p>
+        <pre><code>&lt;button onclick="alert('Button clicked!');"&gt;Натисніть мене&lt;/button&gt;</code></pre>
+        <p>Або ви можете додавати обробники подій за допомогою наступного JavaScript-коду:</p>
+        <pre><code>document.getElementById('myButton').addEventListener('click', function() { alert('Button clicked!'); } );</code></pre>
+        <button onclick="alert('Button clicked!');">Натисніть тут</button>
+
+    </div>
 </main>
 </body>
 </html>

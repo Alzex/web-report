@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторні роботи</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header>
+    <h1>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ<br>З ДИСЦИПЛІНИ "ІНТЕРНЕТ-ТЕХНОЛОГІЇ ТА ПРОЕКТУВАННЯ WEB-ЗАСТОСУВАНЬ"</h1>
+    <p>Студента групи IM-13  Землянського Олександра Валентиновича</p>
+    <div class="student-info">
+        <img src="../img/photo.png" alt="Student Photo" class="student-photo">
+    </div>
+</header>
+<nav>
+    <a href="../lab1/index.html" class="button">Лабораторна №1</a>
+    <a href="../lab2/index.html" class="button">Лабораторна №2</a>
+    <a href="../lab3/index.html" class="button">Лабораторна №3</a>
+    <a href="../lab4/index.html" class="button">Лабораторна №4</a>
+    <a href="../lab5/index.html" class="button">Лабораторна №5</a>
+    <a href="../lab6/index.html" class="button">Лабораторна №6</a>
+    <a href="../lab7/index.html" class="button">Лабораторна №7</a>
+    <a href="../lab8/index.html" class="button">Лабораторна №8</a>
+    <a href="../lab9/index.html" class="button">Лабораторна №9</a>
+</nav>
+<main>
+    <aside>
+        <ul>
+            <li><a href="theme.html" class="sidebar-button">Тема, мета, місце розташування лаби</a></li>
+            <h2>Способи функціонального застосування JavaScript</h2>
+            <li><a href="scheme.html" class="sidebar-button">Схема URL</a></li>
+            <li><a href="events.html" class="sidebar-button">Обробник подій</a></li>
+            <li><a href="entity.html" class="sidebar-button">Підстановка (entity)</a></li>
+            <li><a href="script.html" class="sidebar-button">Вставка (тег script)</a></li>
+            <li><a href="task1-4.html" class="sidebar-button">Пункт 4</a></li>
+            <li><a href="task1-6.html" class="sidebar-button">Пункт 6</a></li>
+            <li><a href="lab5-1.html" class="sidebar-button">Лабораторна 5.1</a></li>
+            <li><a href="conclusions.html" class="sidebar-button">Висновки</a></li>
+        </ul>
+    </aside>
+    <div class="content">
+        <h2>Лабораторна 5.1</h2>
+        <ul>
+            <h3>Завдання №1 (пункт 2)</h3>
+            <li>
+                <b>Умова:</b>Напишіть функцію getProductDetails, яка приймає ідентифікатор товару productId та дві колбек-функції successCallback та errorCallback.
+                <ul>
+                    <li>Функція getProductDetails повинна отримати деталі про вказаний товар та передати їх у successCallback.</li>
+                    <li>У випадку якщо товар не знайдено, викликається errorCallback і передається повідомлення про помилку.</li>
+                </ul>
+            </li>
+            <h3>Завдання №2 (пункт 4)</h3>
+            <li>
+                <b>Умова:</b>З об'єкту concerts отримати масив, який буде містити лише імена міст.
+                З масиву потрібно прибрати міста, в яких концерт  уже пройшов і   відсортувати їх у хронологічному порядку.
+                <br>
+                Результат вивести у консоль.
+                <br>
+                Очікуваний результат: <code>["Одеса", "Умань", "Харків"]</code>
+                Застосувати стрілочні функції
+                <pre>
+                    <code>
+const concerts = {
+    Київ: new Date("2020-04-01"),
+    Умань: new Date("2025-07-02"),
+    Вінниця: new Date("2020-04-21"),
+    Одеса: new Date("2025-03-15"),
+    Хмельницький: new Date("2020-04-18"),
+    Харків: new Date("2025-07-10"),
+};
+                    </code>
+                </pre>
+            </li>
+            <h3>Завдання №3 (пункт 6)</h3>
+            <li>
+                <b>Умова:</b>Напишіть функцію, яка приймає массив об'єктів і повертає новий массив об'єктів,у якому є знижка на  30 % на всі медикаменти ціна, яких перевищує 300 грн у масиві Надайте ід для кожного медикамента.
+                <pre>
+                    <code>
+const medicines = [
+    { name: "Noshpa", price: 170 },
+    { name: "Analgin", price: 55 },
+    { name: "Quanil", price: 310 },
+    { name: "Alphacholine", price: 390 },
+  ];
+                    </code>
+                </pre>
+            </li>
+            <h3>Завдання №4 (пункт 8)</h3>
+            <li>
+                <b>Умова:</b> Напиши функцію конструктор Storage який створює об'єкти  Для управління складом товарів.  При виклику отримуватиме один агрумент - початковий масив товарів,  і записувати їх у властивість items.
+                Додай методи класу:   getItems() - повертайте масив товарів   addItems(item) - отримує новий товар та додає його до поточних   removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних
+            </li>
+            <h3>Завдання №5 (пункт 10)</h3>
+            <li>
+                <b>Умова:</b> Напишіть функцію checkBrackets(str) яка приймає рядок жс коду (someFn)  і перевіряє правильність закриття дужок () {} []
+                Якщо рядок містить коректний код функція повертає true.
+                В іншому випадку повертає false
+            </li>
+        </ul>
+
+        <h2>Скриншот та вихідний код:</h2>
+        <img src="img/lab5-1.png" alt="Lab 5.1">
+        <br>
+        Live: <a href="lab5-1/index.html">Link</a>
+        <br>
+        HTML: <a href="https://github.com/Alzex/web-report/blob/main/lab5/lab5-1/index.html">Link</a>
+        <br>
+        JS: <a href="https://github.com/Alzex/web-report/blob/main/lab5/lab5-1/script.html">Link</a>
+    </div>
+</main>
+</body>
+</html>

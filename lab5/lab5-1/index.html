@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Tasks</title>
+    <script defer src="script.js"></script>
+</head>
+<body>
+<h1>JavaScript Tasks</h1>
+
+<h2>Task 1: Get Product Details</h2>
+<label for="productId">Product ID:</label>
+<input type="number" id="productId" min="1">
+<button onclick="getProductDetailsHandler()">Get Details</button>
+<div id="productResult"></div>
+
+<h2>Task 2: Upcoming Concerts</h2>
+<button onclick="displayUpcomingConcerts()">Show Upcoming Concerts</button>
+<div id="concertResult"></div>
+
+<h2>Task 3: Discounted Medicines</h2>
+<button onclick="displayDiscountedMedicines()">Show Discounted Medicines</button>
+<div id="medicineResult"></div>
+
+<h2>Task 4: Storage Management</h2>
+<label for="storageItem">Item:</label>
+<input type="text" id="storageItem">
+<button onclick="addItemToStorage()">Add Item</button>
+<button onclick="removeItemFromStorage()">Remove Item</button>
+<button onclick="displayStorageItems()">Show Items</button>
+<div id="storageResult"></div>
+
+<h2>Task 5: Check Brackets</h2>
+<label for="codeString">Code String:</label>
+<textarea id="codeString" rows="4" cols="50"></textarea>
+<button onclick="checkBracketsHandler()">Check Brackets</button>
+<div id="bracketsResult"></div>
+</body>
+</html>
