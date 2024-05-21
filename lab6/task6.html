@@ -38,6 +38,28 @@
             <li><a href="task10.html" class="sidebar-button">Варіант 10</a></li>
         </ul>
     </aside>
+    <div class="container">
+        <h1>ЗАВДАННЯ 6</h1>
+        <ul id="number-list">
+            <li>1</li>
+            <li>4</li>
+            <li>8</li>
+            <li>16</li>
+            <li>20</li>
+            <li>30</li>
+        </ul>
+        <button onclick="doubleValues()">Подвоїти</button>
+        <br>
+        <img src="img/task6.png">
+    </div>
 </main>
+<script>
+  function doubleValues() {
+    const listItems = document.querySelectorAll('#number-list li');
+    listItems.forEach(item => {
+      item.textContent = parseInt(item.textContent) * 2;
+    });
+  }
+</script>
 </body>
 </html>

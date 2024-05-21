@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Лабораторні роботи</title>
     <link rel="stylesheet" href="../styles.css">
+    <style>
+        .container {
+            display: inline-block;
+            text-align: center;
+        }
+        #square {
+            width: 100px;
+            height: 100px;
+            border: 2px dashed red;
+            margin: 20px auto;
+        }
+        button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -38,6 +55,25 @@
             <li><a href="task10.html" class="sidebar-button">Варіант 10</a></li>
         </ul>
     </aside>
+
+    <div class="container">
+        <h2>ЗАВДАННЯ 4</h2>
+        <div id="square"></div>
+        <button onclick="resizeSquare(-15)">Зменшити</button>
+        <button onclick="resizeSquare(15)">Збільшити</button>
+        <br>
+        <img src="img/task4-1.png">
+        <img src="img/task4-2.png">
+    </div>
 </main>
+<script>
+  function resizeSquare(change) {
+    const square = document.getElementById('square');
+    let currentWidth = parseInt(window.getComputedStyle(square).width);
+    let currentHeight = parseInt(window.getComputedStyle(square).height);
+    square.style.width = (currentWidth + change) + 'px';
+    square.style.height = (currentHeight + change) + 'px';
+  }
+</script>
 </body>
 </html>

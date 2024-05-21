@@ -38,6 +38,47 @@
             <li><a href="task10.html" class="sidebar-button">Варіант 10</a></li>
         </ul>
     </aside>
+    <div>
+        <form class="login-form">
+            <label>
+                Email
+                <input type="email" name="email" />
+            </label>
+            <label>
+                Password
+                <input type="password" name="password" />
+            </label>
+            <button type="submit">Log in</button>
+        </form>
+        <br>
+        <br>
+        <img src="img/task8.png" alt="Task 8" class="task-image">
+    </div>
+
+
 </main>
+<script>
+  document.querySelector('.login-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const form = event.target;
+    const email = form.elements.email.value.trim();
+    const password = form.elements.password.value.trim();
+
+    if (!email || !password) {
+      alert('All form fields must be filled in');
+      return;
+    }
+
+    const formData = {
+      email: email,
+      password: password
+    };
+
+    console.log(formData);
+
+    form.reset();
+  });
+</script>
 </body>
 </html>

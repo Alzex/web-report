@@ -38,6 +38,53 @@
             <li><a href="task10.html" class="sidebar-button">Варіант 10</a></li>
         </ul>
     </aside>
+    <div>
+        <ul id="categories">
+            <li class="item">
+                <h2>Animals</h2>
+                <ul>
+                    <li>Cat</li>
+                    <li>Hamster</li>
+                    <li>Horse</li>
+                    <li>Parrot</li>
+                </ul>
+            </li>
+            <li class="item">
+                <h2>Products</h2>
+                <ul>
+                    <li>Bread</li>
+                    <li>Prasley</li>
+                    <li>Cheese</li>
+                </ul>
+            </li>
+            <li class="item">
+                <h2>Technologies</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                </ul>
+            </li>
+        </ul>
+        <br>
+        <img src="img/task7.png">
+    </div>
+
 </main>
+    <script>
+      const categoriesList = document.querySelector('#categories');
+      const items = categoriesList.querySelectorAll('.item');
+
+      console.log(`Number of categories: ${items.length}`);
+
+      items.forEach(item => {
+        const categoryTitle = item.querySelector('h2').textContent;
+        const elementsCount = item.querySelectorAll('ul li').length;
+        console.log(`Category: ${categoryTitle}`);
+        console.log(`Elements: ${elementsCount}`);
+      });
+    </script>
 </body>
 </html>

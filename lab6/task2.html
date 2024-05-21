@@ -38,6 +38,24 @@
             <li><a href="task10.html" class="sidebar-button">Варіант 10</a></li>
         </ul>
     </aside>
+    <div>
+        <h2>Input Swapper</h2>
+        <input type="text" id="input1" placeholder="Input 1">
+        <input type="text" id="input2" placeholder="Input 2">
+        <button onclick="swapInputs()">SWAP ME</button>
+        <br>
+        <h2>Screenshot:</h2>
+        <img src="img/task2.png" alt="Task 2 Screenshot">
+    </div>
 </main>
+
+<script>
+    function swapInputs() {
+        const input1 = document.getElementById('input1').value;
+        const input2 = document.getElementById('input2').value;
+        document.getElementById('input1').value = input2;
+        document.getElementById('input2').value = input1;
+    }
+</script>
 </body>
 </html>
