@@ -27,11 +27,34 @@
 </nav>
 <main>
     <aside>
-    <ul>
-        <li><a href="theme.html" class="sidebar-button">Тема, мета</a></li>
-        <li><a href="tasks.html" class="sidebar-button">Завдання</a></li>
-    </ul>
+        <ul>
+            <li><a href="theme.html" class="sidebar-button">Тема, мета</a></li>
+            <li><a href="tasks.html" class="sidebar-button">Завдання</a></li>
+        </ul>
     </aside>
+    <div>
+        <h2>Завдання №1</h2>
+        HTML: <a href="https://github.com/Alzex/web-lab7/blob/main/index.html">Link</a><br>
+        CSS: <a href="https://github.com/Alzex/web-lab7/blob/main/styles/style.css">Link</a><br>
+        JS: <a href="https://github.com/Alzex/web-lab7/blob/main/scripts/gallery.js">Link</a><br><br>
+
+        Live: <a href="https://alzex.github.io/web-lab7/">Link</a>
+        <h2>Завдання №2</h2>
+        HTML: <a href="https://github.com/Alzex/web-lab7/blob/main/index.html">Link</a><br>
+        CSS: <a href="https://github.com/Alzex/web-lab7/blob/main/styles/style.css">Link</a><br>
+        JS: <a href="https://github.com/Alzex/web-lab7/blob/main/scripts/2-form.js">Link</a><br><br>
+
+        Live: <a href="https://alzex.github.io/web-lab7/2-form.html">Link</a>
+    </div>
 </main>
+
+<script>
+    function swapInputs() {
+        const input1 = document.getElementById('input1').value;
+        const input2 = document.getElementById('input2').value;
+        document.getElementById('input1').value = input2;
+        document.getElementById('input2').value = input1;
+    }
+</script>
 </body>
 </html>
