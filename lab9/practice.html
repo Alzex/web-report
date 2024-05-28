@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторні роботи</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header>
+    <h1>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ<br>З ДИСЦИПЛІНИ "ІНТЕРНЕТ-ТЕХНОЛОГІЇ ТА ПРОЕКТУВАННЯ WEB-ЗАСТОСУВАНЬ"</h1>
+    <p>Студента групи IM-13  Землянського Олександра Валентиновича</p>
+    <div class="student-info">
+        <img src="../img/photo.png" alt="Student Photo" class="student-photo">
+    </div>
+</header>
+<nav>
+    <a href="../lab1/index.html" class="button">Лабораторна №1</a>
+    <a href="../lab2/index.html" class="button">Лабораторна №2</a>
+    <a href="../lab3/index.html" class="button">Лабораторна №3</a>
+    <a href="../lab4/index.html" class="button">Лабораторна №4</a>
+    <a href="../lab5/index.html" class="button">Лабораторна №5</a>
+    <a href="../lab6/index.html" class="button">Лабораторна №6</a>
+    <a href="../lab7/index.html" class="button">Лабораторна №7</a>
+    <a href="../lab8/index.html" class="button">Лабораторна №8</a>
+    <a href="../lab9/index.html" class="button">Лабораторна №9</a>
+</nav>
+<main>
+    <aside>
+        <ul>
+            <li><a href="cert.html" class="sidebar-button">Сертифікат</a></li>
+            <li><a href="quiz1.html" class="sidebar-button">Тест №1</a></li>
+            <li><a href="quiz2.html" class="sidebar-button">Тест №2</a></li>
+            <li><a href="practice.html" class="sidebar-button">Практичне завдання</a></li>
+        </ul>
+    </aside>
+    <div>
+         <img src="img/prac1.png">
+    </div>
+    <div>
+        Підключення до бази даних та створення сервера
+        <pre>
+            <code>
+    // config/db.js
+    const mongoose = require('mongoose');
+    require('dotenv').config();
+
+    const connectDB = async () => {
+      try {
+        await mongoose.connect(process.env.MONGODB_URL, {
+          useNewUrlParser: true,
+          useUnifiedTopology: true,
+        });
+        console.log('MongoDB connected');
+      } catch (err) {
+        console.error(err.message);
+        process.exit(1);
+     }
+    };
+
+    module.exports = connectDB;
+            </code>
+        </pre>
+        CRUD
+        <pre>
+            <code>
+const Item = require('../models/items');
+
+exports.createItem = async (req, res, next) => {
+  try {
+    const newItem = new Item(req.body);
+    const item = await newItem.save();
+    res.status(201).json(item);
+  } catch (err) {
+    next(err);
+  }
+};
+
+exports.getItems = async (req, res, next) => {
+  try {
+    const items = await Item.find();
+    res.status(200).json(items);
+  } catch (err) {
+    next(err);
+  }
+};
+
+exports.getItem = async (req, res, next) => {
+  try {
+    const item = await Item.findById(req.params.id);
+    if (!item) {
+      return res.status(404).json({ message: 'Item not found' });
+    }
+    res.status(200).json(item);
+  } catch (err) {
+    next(err);
+  }
+};
+
+exports.updateItem = async (req, res, next) => {
+  try {
+    const item = await Item.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+      runValidators: true,
+    });
+    if (!item) {
+      return res.status(404).json({ message: 'Item not found' });
+    }
+    res.status(200).json(item);
+  } catch (err) {
+    next(err);
+  }
+};
+
+exports.deleteItem = async (req, res, next) => {
+  try {
+    const item = await Item.findByIdAndDelete(req.params.id);
+    if (!item) {
+      return res.status(404).json({ message: 'Item not found' });
+    }
+    res.status(200).json({ message: 'Item deleted' });
+  } catch (err) {
+    next(err);
+  }
+};
+            </code>
+        </pre>
+
+        Error handling middleware
+        <pre>
+            <code>
+    const errorHandler = (err, req, res, next) => {
+      console.error(err.stack);
+     res.status(500).json({ message: err.message });
+    };
+
+    module.exports = errorHandler;
+            </code>
+        </pre>
+
+    </div>
+</main>
+</body>
+</html>
